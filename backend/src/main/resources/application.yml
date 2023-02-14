@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+
+  profiles:
+    active: dev
+
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#    time-zone: GMT+8
+
+shiro:
+  # AES密码加密私钥(Base64加密)
+  encryptAESKey: V2FuZzkyNjQ1NGRTQkFQSUpXVA==
+  # JWT认证加密私钥(Base64加密)
+  encryptJWTKey: U0JBUElKV1RkV2FuZzkyNjQ1NA==
+  # AccessToken过期时间-5分钟-5*60(秒为单位)
+  accessTokenExpireTime: 604800
+  # RefreshToken过期时间-60分钟-30*60(秒为单位)
+  refreshTokenExpireTime: 604800
+  # Shiro缓存过期时间-5分钟-5*60(秒为单位)(一般设置与AccessToken过期时间一致)
+  shiroCacheExpireTime: 604800
+  # 是否需要开启任何请求必须登录才可访问,开发时候可以为false,生产与测试必须为true
+  mustLoginFlag: true
+  #shiro排除过滤url,多个用,分割
+  excludeUrl: /access/login

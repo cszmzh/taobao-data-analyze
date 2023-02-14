@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/taobao?characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: password
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: password
+
+  data:
+    mongodb:
+      authentication-database: admin
+      database: visual-system
+      username: root
+      password: password
+      host: 127.0.0.1
+      port: 27017
+      auto-index-creation: true
+#      uri: mongodb+srv://banana:password@cluster0.swkfi.mongodb.net/visual-system
+
+server:
+  port: 8085
